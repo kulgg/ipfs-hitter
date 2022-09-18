@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "ipfs_hitter"}]
 
 [tool.poetry.scripts]
-md = "ipfs_hitter.__main__:main"
+x = "ipfs_hitter.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"

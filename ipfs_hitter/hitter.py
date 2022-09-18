@@ -2,11 +2,16 @@
 import logging
 from typing import List
 
+import requests
+
 
 class Hitter:
-    def hit(self, urls : List[str]):
-        for url in urls:
-            logging.info(url)
+    def __init__(self):
+        ipfs_url = "http://ipfs.io/ipfs/"
 
-    def _jaiosd(self):
-        pass
+    def hit(self, ids_file: str):
+        with open(ids_file, "r") as ids:
+            for id in ids:
+                url = f"{self.ipfs_url}{id}"
+                logging.info("Requesting %s", url)
+                r = requests.get(url)

@@ -23,7 +23,7 @@ def main():
     try:
         fire.Fire(Hitter)
     except Exception as exception:
-        print(exception)
+        logging.exception(exception)
         sys.exit(ExitStatus.failure)
 
 if __name__ == "__main__":

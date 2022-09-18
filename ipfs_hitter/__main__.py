@@ -11,12 +11,6 @@ def configure_logging():
     log_format = "%(asctime)s [%(levelname)s] %(module)s.%(funcName)s(): %(message)s"
     logging.basicConfig(level=logging.INFO, format=log_format)
 
-    console_logging = logging.StreamHandler()
-    console_logging.setLevel(logging.INFO)
-    formatter = logging.Formatter(log_format)
-    console_logging.setFormatter(formatter)
-    logging.getLogger().addHandler(console_logging)
-
 def main():
     configure_logging()
 
